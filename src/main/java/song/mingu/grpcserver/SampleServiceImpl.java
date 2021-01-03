@@ -8,7 +8,6 @@ import song.mingu.proto.SampleResponse;
 import song.mingu.proto.SampleServiceGrpc;
 
 @Slf4j
-@Service
 public class SampleServiceImpl extends SampleServiceGrpc.SampleServiceImplBase {
 
     @Override

@@ -17,6 +17,7 @@ public class GrpcRunner implements ApplicationRunner {
     private static final int PORT = 3030;
     private static final Server SERVER = ServerBuilder.forPort(PORT)
             .addService(new SampleServiceImpl())
+            .addService(new EventServiceImpl())
             //.directExecutor() //nettey의 쓰레드를 이용한다. 무조건 Reactive하게 짜야함. 블록킹되면 성능최악
             .executor(Executors.newFixedThreadPool(100))
             .build();
